@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: khaki;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+
+
+/*************************************************************
+MAIN MENU
+*************************************************************/
+header {
+    position: relative;
+    height: 90px;
+    background-color: rgb(250, 249, 249);
+    color: rgb(27, 27, 27);
+    border-bottom: 1px solid rgb(27, 27, 27);
+    z-index: 10;
+}
+
+.header-visible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+
+/* logo */
+.logo-a {
+    margin-left: 30px;
+    max-width: 100%;
+    color: rgb(27, 27, 27);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: 600;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.logo-a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* hamburger menu */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+    border: none;
+    width: 45px;
+    height: 30px;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger-lines {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(27, 27, 27);   
+}
+
+
+/* main menu without hamburger */
+.main-menu {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(250, 249, 249);
+    color: rgb(27, 27, 27);
+    z-index: 10;
+}
+
+.main-menu ul {
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+.main-menu a,
+.current-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(27, 27, 27);
+    text-align: center;
+    height: 50px;
+    color: rgb(27, 27, 27);  
+    line-height: 60px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.current-page {
+    text-decoration: underline;
+}
+
+.main-menu a:hover {
+    background-color :darkolivegreen;
+    color: rgb(250, 249, 249);
+    cursor: pointer;
+}
+
+.main-menu a:visited {
+    color: rgb(27, 27, 27);
+} 
+
+/* opens menu */
+.main-menu.open {
+    display: block;
+}
+
+
+/*************************************************************
+    MAIN CONTENT
+*************************************************************/
+main {
+    z-index: 1;
+}
+
+
+@media (min-width: 1024px) {
+
+    /*************************************************************
+        MAIN MENU
+    *************************************************************/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .logo-a {
+        white-space: nowrap;
+    }
+
+    .main-menu {
+        display: block;
+        position: static;
+        padding-right: 60px;
+    }
+
+    .main-menu ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .main-menu a {
+        padding-left: 12px;
+        padding-right: 12px; 
+        border-bottom: none;
+    }
+
+    .main-menu a:hover {
+        border-radius: 10px;
+    } 
+
+    .current-page {
+        border: none;
+    }
+
+}
