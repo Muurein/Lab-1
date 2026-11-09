@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labb 1 - Bootstrap</title>
 
+    <!--bootstrap - css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
+
 </head>
 <body>
 
@@ -26,8 +30,8 @@
         
         <nav class="main-menu" id="main-menu">
             <ul>
-                <li class="current-page">Hem</li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
+                <li><a href="index.html">Hem</a></li>
+                <li class="current-page">Bootstrap</li>
                 <li><a href="tailwind.html">Tailwind</a></li>
                 <li><a href="pub.html">Publicering</a></li>
             </ul>
@@ -38,30 +42,31 @@
         <h1>Bootstrap</h1>
 
         <div>
-            <section class="intro" class="section-white">
+            <section class="intro section-white">
                 <h2>Vad är Bootstrap</h2>
 
                 <p>Länk till ramverket: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
 
-                <artcle>
+                <article>
                     <h3>Info om ramverket</h3>
 
                     <p>
                         Bootstrap är det populäraste CSS-ramverket. Dess fokus ligger på att att skapa responsiva, mobile-first
                         webbappar med hjälp av HTML, CSS och JavaScript. Det används oftast som ett komplement till webappar
                         för att lägga till ramverkets utbud av färger, typsnitt och layouts. Bootstrap erbjuder också styling för
-                        text, tabeller och formulär. Utseendet på dessa är uniformt och ger en "Bootstrapp-look". De JavaScript-komponenter 
-                        som Bootstrap erbjuder interface-element såsom dialogrutor och "drop down"-menyer.
+                        text, tabeller och formulär. Utseendet på dessa är uniformt och ger en "Bootstrapp-look". 
                     </p>
 
                     <p>
-                        
+                        De JavaScript-komponenter 
+                        som Bootstrap erbjuder interface-element såsom dialogrutor och "drop down"-menyer. Varje komponent består av 
+                        en HTML-struktur, CSS-deklarationer samt, i vissa fall, JavaScript kod.
                     </p>
 
                     <p>
                         Det är gratis att använda.
                     </p>
-                </artcle>
+                </article>
                 
             </section>
 
@@ -70,26 +75,197 @@
                 
                 <article>
                     <h3>För- och nackdelar</h3>
+                    <p>
+                        En av de stora <strong>fördelarna</strong> med Bootstrap är att utvecklandet går snabbare. Det blir så lätt att styla en tabell
+                        eftersom man bara kan sätta på Bootstraps egna klasser för att få en snygg design. Att ramverket dessutom förenklar arbetet
+                        med responsiviteten är också ett stort plus. 
+                    </p>
+
+                    <p>
+                        Som beskrivit under rubriken "Info om ramverket" är en av <strong>nackdelarna</strong> med Bootstrap att det ger en särksild "Bootstrapp-look"
+                        till sin design, vilket får mig att inte vilja använda överdrivet mycket även om det förenklar flera steg i utvecklingen. Dock kan det komma att 
+                        ändras när jag har använt det mer. Det kan visa sig vara en liknande situation till första gången jag skulle köra en automatbil och sa 
+                        "Nä, jag tycker absolut inte om automatbilar. Man vill ju ha kontrollen av att man kan växla" för att sedan tycka att köra automat faktiskt 
+                        var väldigt skönt och behändigt. 
+                    </p>
                 </article>
 
-                <artcle>
+                <article>
                     <h3>Mina upplevelser att arbeta med ramverket</h3>
-                </artcle>
+                    <p>
+                        Jag visste att Bootstrap skulle ge mycket till utvecklingsprocessen men jag var förvånad hur lätt det faktiskt var att använda det.
+                        Ett tillägg av en klass direkt i HTML-koden och tabellen blir responsiv. Dock upplever jag att det blir mycket extra kod eftersom 
+                        just den klassen kräver en helt ny tabell, om jag förstått det rätt. Det känns som att det måste finnas ett bättre sätt.
+                    </p>
+                    <p>
+                        Jag upplevde också att även om Bootstraps dokumentation var ganska lätt att förstå kunde den ibland också vara förvirrande.
+                        Ibland skrev den ungefär "gör bara det här om du använder SCSS" men sen längre ner säger den ungefär "du behöver de här filerna pga bla för
+                        SCSS", vilket fick mig att undra om jag faktiskt skulle ha med dem eller inte till den grad att jag letade upp en till källa som
+                        bekräftade att nej, de filerna behövs bara om man använder SCSS.
+                    </p>
+                </article>
             </section>
 
+            <!--små skärmar-->
             <section class="section-white">
-                <table>
-                    
-                </table>
-            </section class="section-white">
+                <h2>Resultatet av formuläret</h2>
+                <div class="border rounded overflow-hidden table-responsive">
+                    <table class="table table-hover table-bordered caption-top">
+                        <caption>Vad är du för typ av person?</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="theme-success">Namn</th>
+                                <th scope="col" class="theme-success">Årstid</th>
+                                <th scope="col" class="theme-success">Vattenkropp</th>
+                                <th scope="col" class="theme-success">Dryck</th>
+                                <th scope="col" class="theme-success">Favoritfärg</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td scope="row">Anna</td>
+                                <td>Sommar</td>
+                                <td>Sjö</td>
+                                <td>Te</td>
+                                <td>Blå</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Kajsa</td>
+                                <td>Vår</td>
+                                <td>Hav</td>
+                                <td>Kaffe</td>
+                                <td>Grön</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Morgan</td>
+                                <td>Höst</td>
+                                <td>Sjö</td>
+                                <td>Te</td>
+                                <td>Röd</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Marie</td>
+                                <td>Vinter</td>
+                                <td>Hav</td>
+                                <td>Te</td>
+                                <td>Gul</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <section class="section-white">
+                <!--för större skärmar, large och över-->
+                <div class="border rounded overflow-hidden lg:table-responsive">
+                    <table class="table table-hover table-bordered caption-top">
+                        <caption>Vad är du för typ av person?</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="theme-success">Namn</th>
+                                <th scope="col" class="theme-success">Årstid</th>
+                                <th scope="col" class="theme-success">Vattenkropp</th>
+                                <th scope="col" class="theme-success">Dryck</th>
+                                <th scope="col" class="theme-success">Favoritfärg</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td scope="row">Anna</td>
+                                <td>Sommar</td>
+                                <td>Sjö</td>
+                                <td>Te, Kaffe</td>
+                                <td>Blå</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Kajsa</td>
+                                <td>Vår</td>
+                                <td>Hav</td>
+                                <td>Kaffe</td>
+                                <td>Grön</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Morgan</td>
+                                <td>Höst</td>
+                                <td>Sjö</td>
+                                <td>Te</td>
+                                <td>Röd</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Marie</td>
+                                <td>Vinter</td>
+                                <td>Hav</td>
+                                <td>Te</td>
+                                <td>Gul</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!--input - namnXX, textarea - färg, checkbox - te/kaffe, selectlista - årstid, radio - årstidXX-->
+            <div class="section-white">
+                <h2>Medarbetarformulär - Vad gillar du bäst?</h2>
+
                 <form>
+                    <!--namn - input-->
+                    <div class="form-field">
+                        <label for="validationCustom01" class="form-label">Namn:</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Amanda">
+                        <div id="validationCustom01Feedback" class="invalid-feedback">Du måste skriva in ett namn</div>
+                    </div>
 
+                    <!--årstid - select-->
+                    <div class="form-field">
+                        <label for="fieldSelect" class="form-label">Årstid</label>
+                        <select class="form-control" id="fieldSelect">
+                            <option selected>Välj en</option>
+                            <option value="1">Vår</option>
+                            <option value="2">Sommar</option>
+                            <option value="3">Höst</option>
+                            <option value="4">Vinter</option>
+                        </select>
+                    </div>
+
+                    <!--vattenkropp - radio-knapp-->
+                    <div class="form-group">
+                        <label class="form-label">Vattenkropp</label>
+
+                        <!--sjö-->
+                        <div class="form-field">
+                            <input type="radio" id="fieldGroupRadio1" class="radio" name="fieldGroupRadio" required>
+                            <label for="fieldGroupRadio1">Sjö</label>
+                        </div>
+
+                        <!--hav-->
+                        <div class="form-field">
+                            <input type="radio" id="fieldGroupRadio2" class="radio" name="fieldGroupRadio" required>
+                            <label for="fieldGroupRadio2">Hav</label>
+                        </div>
+                    </div>
+
+                    <!--dryck - checkbox-->
+                    <div class="form-field">
+                        <input type="checkbox" id="fieldCheck" class="check">
+                        <label for="fieldCheck">Te</label>
+                        <input type="checkbox" id="fieldCheck" class="check">
+                        <label for="fieldCheck">Kaffe</label>
+                    </div>
+
+                    <!--färg - textarea-->
+                    <div class="form-field">
+                        <label for="fieldTextarea" class="form-label">Favoritfärg</label>
+                        <textarea class="form-control" id="fieldTextarea" rows="1"></textarea>
+                        <div class="form-text">
+                            Du kan skriva in flera färger, men håll dig helst till en
+                        </div>
+                    </div>
+
+                    <button class="btn-solid theme-success justify-self-start" type="submit">Skicka</button>
                 </form>
-            </section>
+            </div>
 
-        
     </main>
+
+     <!--bootstrap - javascript-->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>

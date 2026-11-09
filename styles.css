@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: khaki;
+    background-color: rgb(255, 248, 144);
     font-family: Verdana, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.2em;
@@ -124,7 +124,7 @@ header {
 /*************************************************************
     MAIN CONTENT
 *************************************************************/
-main {
+.frontpage-main {
     z-index: 1;
 }
 
