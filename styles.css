@@ -10,12 +10,12 @@ body {
 }
 
 
-
 /*************************************************************
 MAIN MENU
 *************************************************************/
 header {
     position: relative;
+    margin: 0;
     height: 90px;
     background-color: rgb(250, 249, 249);
     color: rgb(27, 27, 27);
@@ -125,11 +125,34 @@ header {
     MAIN CONTENT
 *************************************************************/
 .frontpage-main {
+    margin-left: auto;
+    margin-top: 2em;
+    margin-right: auto;
+    padding: 2em;
+    box-shadow: 10px 10px rgb(27, 27, 27);
+    border: 1px solid rgb(27, 27, 27);
+    width: 70%;
+    background-color: rgb(250, 249, 249);
+    color: rgb(27, 27, 27);
     z-index: 1;
 }
 
+.frontpage-main h1 {
+    margin-bottom: 1em;
+}
+
+.frontpage-main p {
+    margin-bottom: 1em;
+}
+
+
 
 @media (min-width: 1024px) {
+
+    .frontpage-main {
+        padding: 3em;
+        width: 30%;
+    }
 
     /*************************************************************
         MAIN MENU

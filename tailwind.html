@@ -1,47 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labb 1 - Tailwind</title>
-</head>
-<body>
+    <title>Labb 1 - Hem</title>
+
+    <!--tailwind-->
+    <link rel="stylesheet" href="./src/output.css">
+    <!--kommando till terminalen för att registrera ändrignar-->
+    <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
+
+    <!-- <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script> -->
     
-    <main>
-        <h1>Bootstrap</h1>
+</head>
+<body class="m-0 bg-yellow-200 ">
+    
+    <header class="w-full bg-white border-b">
+        <div class="pt-5 pb-3 text-center">
+            <a class="text-4xl font-semibold hover:text-lime-800 hover:underline" href="index.html">LABB 1</a>
+        </div>
+
+            <!--the hamburger icon-->
+            <!-- <button class="hamburger-menu" id="hamburger-menu" aria-label="Öppna meny">
+                <span class="hamburger-lines"></span>
+                <span class="hamburger-lines"></span>
+                <span class="hamburger-lines"></span>
+            </button>
+        </div> -->
+
+        <nav  id="main-menu">
+            <ul class="flex flex-wrap gap-7 justify-center">
+                <li class="hover:underline hover:text-lime-800 "><a class="text-lg font-semibold" href="index.html">Hem</a></li>
+                <li class="hover:underline hover:text-lime-800"><a class="text-lg font-semibold" href="bootstrap.html">Bootstrap</a></li>
+                <li class="underline text-lg font-semibold">Tailwind</li>
+                <li class="hover:underline hover:text-lime-800"><a class="text-lg font-semibold" href="pub.html">Publicering</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="bg-white border w-95 m-auto p-8 mt-10 mb-10 shadow-[10px_10px_0px_#171717] md:w-150 md:p-15">
+        <h1 class="text-2xl font-bold mb-4">Tailwind</h1>
 
         <div>
-            <section>
-                <h2>Vad är Bootstrap</h2>
+            <section class="mt-7">
+                <h2 class="text-xl font-semibold mb-2">Vad är Tailwind</h2>
 
-                <article>
-                    <h3>Info om ramverket</h3>
+                <p>Länk till ramverket: <a class="text-sky-600 underline hover:font-semibold" href="https://tailwindcss.com/">https://tailwindcss.com/</a></p>
+
+                <article class="mt-7">
+                    <h3 class="font-semibold mb-2">Info om ramverket</h3>
+                    <p>
+                        Tailwind är ett CSS-ramverk, men tillskillnad mot andra CSS-ramverk, som Bootstrap, stylar Tailwind element med något som kallas för utility-classes.
+                        Om ett ramverk som Bootstrap hade erbjudit klassen "message-warning" hade klassen implementerat komplett styling med ex. fetstil och en färgad bakgrund. 
+                        För att få samma resultat i Tailwind behöver man lägga till flertalet fristående klasser som font-bold oc h bg-yellow-300. Med andra ord skapas inte 
+                        klasserna runt själva komponenterna utan efter specifika styling element. 
+                    </p>
                 </article>
                 
             </section>
 
-            <section>
-                <h2>Utvärdering av ramverket</h2>
+            <section class="mt-7">
+                <h2 class="text-xl font-semibold mb-2">Utvärdering av ramverket</h2>
                 
                 <article>
-                    <h3>För- och nackdelar</h3>
+                    <h3 class="text-lg font-semibold">För- och nackdelar</h3>
+                    <p class="mb-3">
+                        En stor <strong>fördel</strong> med Tailwind, gentemot Bootstrap, är att man får mer kontroll över stylingen. Det är också trevligt att man man lägga till kod 
+                        som sköter responsivietetn utan att lägga till mer kod än ex. "class=md:table-fixed". Dessutom tycker jag att Tailwind hanterar sin dokumentation väldigt bra. 
+                        Även som nybörjare är det ganska lätt att hitta olika kommandon som man letar efter.
+                    </p>
+
+                    <p>
+                        Dock blir kontrollen man får över koden en <strong>nackdel</strong> på det sättet att inlärningskurvan blir betydligt brantare. En annan nackdel, som kan komma från 
+                        att jag är ovan, tycker jag är att man behöver lägga till så många olika klasser för att få stylingen man vill ha. Om jag ändå ska skriva så mycket kod 
+                        känner jag nu, i mitt totala nybörjarläge, att jag lika gärna kan skriva det i CSS. Man skulle kunna slå ett slag för att man ser stylingen tydligare eller 
+                        att man snabbare får en överblick när det ligger direkt på elementet men jag upplever att det blir rörigt. 
+                    </p>
                 </article>
 
-                <article>
-                    <h3>Mina upplevelser att arbeta med ramverket</h3>
+                <article class="mt-7">
+                    <h3 class="text-lg font-semibold">Mina upplevelser att arbeta med ramverket</h3>
+                    
+                    <p class="mb-3">
+                        Jag använder Tailwind CLI, även om jag i framtiden skulle vilja testa att använda det med Vite då det verkar vara populärt.
+                    </p>
+                    <p class="mb-3">
+                        Jag fick en väldigt dålig bild att Tailwind i början då det kändes otroligt överväldigande att se alla klasser (som jag dessutom inte visste vad de gjorde)
+                        i HTML-koden. Efter ett tag, när jag blev mer van, blev det natruligtvis bättre men jag är fortfarande inte såld. Det kan självklart ändras när 
+                        jag blir ännu mer bekväm med Tailwind men om jag skrev här över som en nackdel tycker jag inte Tailwind är såpass bra att jag skulle välja det 
+                        framför vanlig CSS. I alla fall inte just nu i skrivande stund.  
+                    </p>
+
+                    <p class="mb-3">
+                        Det kan absolut vara nice att direkt kunna se design-element direkt i HMTL-koden, men det blir samtidigt svårare att se sidans uppbyggnad i HMTL:en och 
+                        bara ger ögat ännu mer att skanna igenom. Dock kanske man kan "ställa upp" koden annorlunda så det blir lättare. Återigen är jag mycket medveten om att 
+                        jag kan komma att ändra åsikt när jag har blivit mer bekväm med Tailwind, men jag tycker ändå att stylingen gör sig bäst separat i sina egna filer. 
+                    </p>
                 </article>
             </section>
 
-            <section>
-                <table>
-                    
-                </table>
+            <section class="bg-white mt-7">
+                <!-- <caption class="caption-top">Mest sålda exemplar per media per år</caption> -->
+                <div class="w-full overflow-x-scroll rounded-lg border border-slate-200">
+                    <table class="w-full md:table-fixed">
+                        <thead class="border-b border-slate-200 bg-green-200 text-sm font-semibold text-slate-600">
+                            <tr>
+                                <th class="px-2.5 py-2 text-start font-semibold">Namn</th>
+                                <th class="px-2.5 py-2 text-start font-semibold">Språk</th>
+                                <th class="px-2.5 py-2 text-start font-semibold">Nivå</th>
+                                <th class="px-2.5 py-2 text-start font-semibold">Undervisningstid</th>
+                                <th class="px-2.5 py-2 text-start font-semibold">Varför du vill läsa språket</th>
+                            </tr>
+                        </thead>
+                        <tbody class="group text-sm text-slate-800">
+                            <tr class="border-b border-slate-300 last:border-0 hover:bg-slate-100">
+                                <td class="p-3">Anna</td>
+                                <td class="p-3">Kroatiska</td>
+                                <td class="p-3">Nybörjare (A1)</td>
+                                <td class="p-3">Dag, Kväll</td>
+                                <td class="p-3">Min partner och hans familj är från Kroatien så jag vill lära mig språket!</td>
+                            </tr>
+                            <tr class="border-b border-slate-300 last:border-0 hover:bg-slate-100">
+                                <td class="p-3">Kajsa</td>
+                                <td class="p-3">Spanska</td>
+                                <td class="p-3">Grundläggande (A2)</td>
+                                <td class="p-3">Kväll</td>
+                                <td class="p-3">Har inte läst spanska sen gymnasiet men kommer ihåg en del. Vill börja om så jag kan repetera och bli ännu bättre! </td>
+                            </tr>
+                            <tr class="border-b border-slate-300 last:border-0 hover:bg-slate-100">
+                                <td class="p-3">Morgan</td>
+                                <td class="p-3">Tyska</td>
+                                <td class="p-3">Avancerad (C1)</td>
+                                <td class="p-3">Dag, Kväll</td>
+                                <td class="p-3">Jag ska iväg på ett utbytesår via universitetet efter sommaren. Jag vill blir så bra jag kan bli innan dess.</td>
+                            </tr>
+                            <tr class="border-b border-slate-300 last:border-0 hover:bg-slate-100">
+                                <td class="p-3">Marie</td>
+                                <td class="p-3">Kinesiska</td>
+                                <td class="p-3">Över mellannivå (B2)</td>
+                                <td class="p-3">Kväll</td>
+                                <td class="p-3">Jag har börjat jobba på ett kinesiskt företag på distans och behöver bli bättre på språket</td>
+                            </tr>
+                            <tr class="border-b border-slate-300 last:border-0 hover:bg-slate-100">
+                                <td class="p-3">Anton</td>
+                                <td class="p-3">Franska</td>
+                                <td class="p-3">Nybörjare (A1)</td>
+                                <td class="p-3">Dag</td>
+                                <td class="p-3">Franska serier och filmer är det bästa som finns, hade varit coolt att förstå vad dem säger utan undertexter!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
-            <section>
-                <form>
+            <section class="mt-7">
+                <!--https://v1.tailwindcss.com/components/forms-->
+                <div class="w-full max-w-lg mx-auto bg-white">
+
+                    <h2 class="font-bold text-lg">Språkformulär</h2>
                     
-                </form>
+                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <!--Namn - input-->
+                        <div class="mb-10">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Namn:</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text">
+                        </div>
+                        
+                        <!--Väl språk - select-->
+                        <div class="mt-10 mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name" for="language">Vilket språk vill du läsa?</label>
+                            <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8  rounded shadow leading-tight focus:outline-none shadow-outline">
+                                <option selected>Välj ett</option>
+                                <option value="1">Engelska</option>
+                                <option value="2">Tyska</option>
+                                <option value="3">Franska</option>
+                                <option value="4">Spanska</option>
+                                <option value="5">Italienska</option>
+                                <option value="6">Kroatiska</option>
+                                <option value="7">Kinesiska</option>
+                            </select>
+                        </div>
+                        
+                        <!--Undervisningstid - checkbox-->
+                        <p><strong>Vilken eller vilka undervisningstider passar dig bäst?</strong></p>
+
+                        <div class="md:flex md:items-center mb-6">
+                            
+                            <div class="mb-4 md:w-1/3">
+                                <label class="md:w-2/3 block text-gray-500 font-bold" for="time-day">
+                                    <input class="mr-2 leading-tight" type="checkbox" id="time-day">
+                                    <span class="text-sm">Dag</span>
+                                </label>
+
+                                <label class="md:w-2/3 block text-gray-500 font-bold" for="time-eve">
+                                    <input class="mr-2 leading-tight" type="checkbox" id="time-eve">
+                                    <span class="text-sm">Kväll</span>
+                                </label>
+                            </div>
+                        </div>
+                       
+
+                        <!-- Nivå - radio, nybörjare (A1), grundläggande (A2), Mellan (B1), Övre mellan (B2), Avancerad (C1), Fullständig behärskning (C2)  -->
+                        <p><strong>Vilken nivå vill du börja läsa?</strong></p>
+
+                        <div class="md:flex md:items-center mb-6">
+                            
+                            <div class="mb-4"> <!-- VARFÖR KAN MAN KRYSSA I FLERA  -->
+                                <label class="block text-gray-500 font-bold" for="a1">
+                                    <input class="mr-2 leading-tight" type="radio" id="a1" name="language">
+                                    <span class="text-sm">Nybörjare (A1)</span>
+                                </label>
+
+                                <label class="block text-gray-500 font-bold" for="a2">
+                                    <input class="mr-2 leading-tight" type="radio" id="a2" name="language">
+                                    <span class="text-sm">Grundläggande (A2)</span>
+                                </label>
+
+                                <label class="block text-gray-500 font-bold" for="b1">
+                                    <input class="mr-2 leading-tight" type="radio" id="b1" name="language">
+                                    <span class="text-sm">Mellannivå (B1)</span>
+                                </label>
+
+                                
+                                <label class="block text-gray-500 font-bold" for="b2">
+                                    <input class="mr-2 leading-tight" type="radio" id="b2" name="language">
+                                    <span class="text-sm">Övre mellannivå (B2)</span>
+                                </label>
+
+                                
+                                <label class="block text-gray-500 font-bold" for="c1">
+                                    <input class="mr-2 leading-tight" type="radio" id="c1" name="language">
+                                    <span class="text-sm">Avancerad (C1)</span>
+                                </label>
+
+                                                                
+                                <label class="block text-gray-500 font-bold" for="c2">
+                                    <input class="mr-2 leading-tight" type="radio" id="c2" name="language">
+                                    <span class="text-sm">Fullständig behärskning (C2)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!--Varför vill du läsa språket - textarea-->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="why">Varför du skulle vilja läsa språket:</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="why" type="textarea">
+                        </div>
+
+                        <!-- knapp - submit -->
+                         <button class="bg-lime-800 text-white hover:bg-slate-900 p-3 rounded-lg cursor hover:cursor-pointer" type="sumbit">Skicka</button>
+                    </form>
+                </div>
+            
             </section>
 
         
