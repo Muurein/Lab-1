@@ -8,37 +8,43 @@
     <!--bootstrap - css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <script src="main.js" defer></script> -->
 
 </head>
-<body id="frontpage">
+<body class="bg-warning"> 
 
     <header>
-        <div class="header-visible">
-            <div class="logo-div">
-                <a class="logo-a" href="index.html">LABB 1</a>
-            </div>
+        <!-- https://getbootstrap.com/docs/6.0/components/menu/ -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">LABB 1</a>
 
-            <!--the hamburger icon-->
-            <button class="hamburger-menu" id="hamburger-menu" aria-label="Öppna meny">
-                <span class="hamburger-lines"></span>
-                <span class="hamburger-lines"></span>
-                <span class="hamburger-lines"></span>
-            </button>
-        </div>
-        
-        <nav class="main-menu" id="main-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn-solid theme-success" type="button" data-bs-toggle="menu" aria-expanded="false">Meny</button>
+
+                        <div class="menu">
+                            <a class="menu-item" href="index.html">Hem</a>
+                            <a class="menu-item active theme-success" aria-current="true">Bootstrap</a>
+                            <a class="menu-item" href="tailwind.html">Tailwind</a>
+                            <a class="menu-item" href="pub.html">Publicering</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- <nav class="main-menu" id="main-menu">
             <ul>
-                <li><a href="index.html">Hem</a></li>
+                <li><a >Hem</a></li>
                 <li class="current-page">Bootstrap</li>
                 <li><a href="tailwind.html">Tailwind</a></li>
                 <li><a href="pub.html">Publicering</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     
-    <main>
+    <main class="bg-white p-8 w-75 lg:w-25 mx-auto mt-10" > <!-- p-8 mx-auto mt-10" style="width: 70%" style="width: 70%"-->
         <h1>Bootstrap</h1>
 
         <div>
@@ -103,13 +109,18 @@
                         SCSS", vilket fick mig att undra om jag faktiskt skulle ha med dem eller inte till den grad att jag letade upp en till källa som
                         bekräftade att nej, de filerna behövs bara om man använder SCSS.
                     </p>
+                    <p>
+                        Det måste dock läggas till, att efter att jag stylat Tailwind-sidan och gick tillbaka för att fixa lite på Bootstrap-sidan tycker jag inte längre att Bootstraps dokumentation 
+                        är lika bra och tycker plötsligt att Tailwind är lättare att använda. Dok kan det bero på att jag verkar ha använt Bootstrap v.6 alpha som inte ska vara på topp än, 
+                        vilket kan ha bidragit till problemen.
+                    </p>
                 </article>
             </section>
 
             <!--små skärmar-->
             <section class="section-white">
                 <h2>Resultatet av formuläret</h2>
-                <div class="border rounded overflow-hidden table-responsive">
+                <div class="border rounded table-responsive">
                     <table class="table table-hover table-bordered caption-top">
                         <caption>Vad är du för typ av person?</caption>
                         <thead>
@@ -160,56 +171,10 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!--för större skärmar, large och över-->
-                <div class="border rounded overflow-hidden lg:table-responsive">
-                    <table class="table table-hover table-bordered caption-top">
-                        <caption>Vad är du för typ av person?</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col" class="theme-success">Namn</th>
-                                <th scope="col" class="theme-success">Årstid</th>
-                                <th scope="col" class="theme-success">Vattenkropp</th>
-                                <th scope="col" class="theme-success">Dryck</th>
-                                <th scope="col" class="theme-success">Favoritfärg</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-group-divider">
-                            <tr>
-                                <td scope="row">Anna</td>
-                                <td>Sommar</td>
-                                <td>Sjö</td>
-                                <td>Te, Kaffe</td>
-                                <td>Blå</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Kajsa</td>
-                                <td>Vår</td>
-                                <td>Hav</td>
-                                <td>Kaffe</td>
-                                <td>Grön</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Morgan</td>
-                                <td>Höst</td>
-                                <td>Sjö</td>
-                                <td>Te</td>
-                                <td>Röd</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Marie</td>
-                                <td>Vinter</td>
-                                <td>Hav</td>
-                                <td>Te</td>
-                                <td>Gul</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </section>
 
             <!--input - namnXX, textarea - färg, checkbox - te/kaffe, selectlista - årstid, radio - årstidXX-->
-            <div class="section-white">
+            <div class="bg-white">
                 <h2>Medarbetarformulär - Vad gillar du bäst?</h2>
 
                 <form>
@@ -234,7 +199,7 @@
 
                     <!--vattenkropp - radio-knapp-->
                     <div class="form-group">
-                        <label class="form-label">Vattenkropp</label>
+                        <label for="fieldCheck" class="form-label">Vattenkropp:</label>
 
                         <!--sjö-->
                         <div class="form-field">
@@ -251,6 +216,7 @@
 
                     <!--dryck - checkbox-->
                     <div class="form-field">
+                        <label for="fieldRadio" class="form-label">Dryk:</label>
                         <input type="checkbox" id="fieldCheck" class="check">
                         <label for="fieldCheck">Te</label>
                         <input type="checkbox" id="fieldCheck" class="check">
